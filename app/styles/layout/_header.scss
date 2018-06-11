@@ -6,5 +6,6 @@
   background-size: cover;
   &__block {
     @include center-center;
+    height: 100%;
   }
 }
