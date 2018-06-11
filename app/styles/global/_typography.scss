@@ -1,0 +1,43 @@
+.header {
+  &__title {
+    font-size: 7.2rem;
+    font-weight: $fw-medium;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: -1rem;
+    padding-bottom: 5rem;
+    @include media-to($tablet-bp) {
+      font-size: 5rem;
+      margin-top: -0.5rem;
+    }
+  }
+  &__subtitle {
+    font-size: 3rem;
+    font-weight: $fw-light;
+    color: #fff;
+    display: inline-block;
+    position: relative;
+    @include media-to($tablet-bp) {
+      font-size: 2rem;
+    }
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      border-bottom: 1px solid #fff;
+      bottom: 50%;
+      width: 16rem;
+      @include media-to($tablet-bp) {
+        width: 12rem;
+      }
+    }
+    &::after {
+      margin-left: 2rem;
+    }
+    &::before {
+      right: 100%;
+      margin-right: 2rem;
+    }
+  }
+}
