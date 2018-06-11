@@ -3,4 +3,16 @@
   height: 30rem;
   background-image: url('../../images/team-bg.png');
   background-size: cover;
+  display: flex;
+  align-items: center;
+  &__block {
+    border: 1px solid #fff;
+    height: 20rem;
+    width: 102rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
 }
