@@ -2,4 +2,36 @@
   margin: 0 auto;
   height: 30rem;
   background-color: #000;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  > div {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 30%;
+    justify-content: center;
+    align-items: center;
+    &:last-child {
+      flex-basis: 100%;
+    }
+  }
+  &__title {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $color-green;
+  }
+  &__desc {
+    color: $color-grey;
+    width: 60%;
+    text-align: center;
+    padding: 1rem 3rem;
+  }
+  &__copyright {
+    color: $color-grey;
+    font-size: 1.4rem;
+  }
 }
