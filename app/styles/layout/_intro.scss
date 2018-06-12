@@ -8,11 +8,11 @@
     border: 1px solid #fff;
     height: 20rem;
     width: 102rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include center-center;
     margin: 0 auto;
+    @include media-to($wide-bp) {
+      margin: 0 4rem;
+    }
   }
 }
 

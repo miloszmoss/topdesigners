@@ -9,12 +9,18 @@
     display: flex;
     flex-basis: 70%;
     justify-content: flex-end;
+    @include media-to($phone-bp) {
+      flex-basis: 70%;
+    }
   }
   &__right {
     flex-basis: 30%;
     display: flex;
     height: 100%;
     background-color: #000;
+    @include media-to($phone-bp) {
+      flex-basis: 30%;
+    }
   }
   &__list {
     display: flex;
@@ -22,6 +28,12 @@
     align-items: center;
     width: 95rem;
     text-align: right;
+    @include media-to($wide-bp) {
+      width: 85rem;
+    }
+    @include media-to($desktop-bp) {
+      width: 100%;
+    }
   }
   &-item {
     &:first-child {
@@ -52,6 +64,11 @@
         }
       }
     }
+    > a > i {
+      @include media-to($phone-bp) {
+        display: none;
+      }
+    }
   }
   &__menu {
     display: flex;
@@ -60,6 +77,9 @@
     &-title {
       text-transform: uppercase;
       color: #fff;
+      @include media-to($phone-bp) {
+        display: none;
+      }
     }
   }
 }
