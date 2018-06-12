@@ -28,3 +28,9 @@
   font-weight: $fw-bold;
   border-radius: 100%;
 }
+
+@mixin hover($color) {
+  &:hover {
+    color: $color;
+  }
+}
