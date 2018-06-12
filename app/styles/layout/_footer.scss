@@ -1,7 +1,7 @@
 .footer {
   margin: 0 auto;
   height: 30rem;
-  background-color: #000;
+  background-color: #101010;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -33,5 +33,6 @@
   &__copyright {
     color: $color-grey;
     font-size: 1.4rem;
+    background-color: #0e0e0d;
   }
 }
