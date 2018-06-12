@@ -5,19 +5,34 @@
   &__col {
     display: flex;
     flex-direction: column;
+    &:nth-child(2) {
+      @include media-to($phone-bp) {
+        display: none;
+      }
+    }
     &:nth-child(3) {
       @include media-to($wide-bp) {
         display: none;
       }
     }
-    > img {
+    > * {
       display: flex;
       height: auto;
       flex-basis: 50%;
+      width: 50%;
       filter: grayscale(100%) brightness(70%);
       transition: all 0.4s;
       &:hover {
         filter: grayscale(0%) brightness(90%);
+      }
+      @include media-to($tablet-bp) {
+        height: 18rem;
+      }
+      @include media-to($small-bp) {
+        height: 15rem;
+      }
+      @include media-to($phone-bp) {
+        height: 20rem;
       }
     }
   }
@@ -36,6 +51,9 @@
     }
     @include media-to($wide-bp) {
       flex-basis: calc(100% / 2);
+    }
+    @include media-to($phone-bp) {
+      flex-basis: 100%;
     }
   }
   &-small {

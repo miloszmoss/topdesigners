@@ -5,12 +5,19 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  @include media-to($tablet-bp) {
+    height: unset;
+  }
   > div {
     display: flex;
     flex-direction: column;
     flex-basis: 30%;
     justify-content: center;
     align-items: center;
+    @include media-to($tablet-bp) {
+      padding: 3rem 0;
+      flex-basis: 100%;
+    }
     &:last-child {
       flex-basis: 100%;
     }
@@ -29,6 +36,9 @@
     width: 60%;
     text-align: center;
     padding: 1rem 3rem;
+    @include media-to($desktop-bp) {
+      padding: 1rem 0;
+    }
   }
   &__copyright {
     color: $color-grey;

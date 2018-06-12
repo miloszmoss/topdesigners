@@ -11,6 +11,11 @@
       font-size: 5rem;
       margin-top: -0.5rem;
     }
+    @include media-to($phone-bp) {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      text-align: center;
+    }
   }
   &__subtitle {
     font-size: 3rem;
@@ -30,6 +35,9 @@
       width: 16rem;
       @include media-to($tablet-bp) {
         width: 12rem;
+      }
+      @include media-to($phone-bp) {
+        width: 8rem;
       }
     }
     &::after {

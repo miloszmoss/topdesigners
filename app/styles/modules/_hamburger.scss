@@ -11,6 +11,11 @@
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  @include media-to($phone-bp) {
+    width: 4rem;
+    height: 0.1rem;
+    padding: 2px 0;
+  }
 }
 
 #hamburger-1.is-active .line:nth-child(2) {
