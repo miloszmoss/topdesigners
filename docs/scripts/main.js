@@ -1,0 +1,1 @@
+"use strict";function hide(){var e=document.querySelector(".loader");e.style.transition="all 1s",e.style.opacity="0",setTimeout(function(){document.querySelector(".loader").remove()},1e3)}(window.whenloaded=function(e){setTimeout("hide()",1e3)})();
