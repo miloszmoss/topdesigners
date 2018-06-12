@@ -4,6 +4,7 @@
   width: 100%;
   background-color: #fff;
   display: flex;
+  z-index: 50;
   &__left {
     height: 100%;
     display: flex;
@@ -36,13 +37,23 @@
     }
   }
   &-item {
-    a {
-      color: #000;
-      &:visited,
-      &:focus,
-      &:active {
-        color: #000;
-      }
+    &--facebook,
+    &--twitter,
+    &--insta,
+    &--linkedin {
+      transition: all 0.2s;
+    }
+    &--facebook {
+      @include hover(#3b5898);
+    }
+    &--insta {
+      @include hover(#e95950);
+    }
+    &--twitter {
+      @include hover(#55acee);
+    }
+    &--linkedin {
+      @include hover(#007bb5);
     }
     &:first-child {
       margin-right: auto;
@@ -92,11 +103,13 @@
   &__wall {
     position: absolute;
     height: calc(56vh);
-    transform: translateX(120%);
+    width: 100%;
     top: 100%;
+    z-index: 30;
     background-color: rgba(33, 31, 31, 0.9);
     transition: all 0.5s ease-in-out;
-    z-index: 30;
+    transform: translateX(-20%);
+    opacity: 0;
     .menu-list {
       padding: 0;
       display: flex;
@@ -119,7 +132,9 @@
       }
     }
     &-show {
+      display: unset;
       transform: translateX(0);
+      opacity: 1;
     }
   }
 }
