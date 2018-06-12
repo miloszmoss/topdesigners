@@ -1,3 +1,9 @@
+document.querySelector('.footer_home').addEventListener('click', () => {
+  scrollIt(document.querySelector('.header'), 800, 'easeOutQuad', () =>
+    console.log(`Just finished scrolling to ${window.pageYOffset}px`)
+  );
+});
+
 function scrollIt(destination, duration = 200, easing = 'linear', callback) {
   const easings = {
     linear(t) {
