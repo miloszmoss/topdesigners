@@ -26,7 +26,7 @@
         filter: grayscale(0%) brightness(90%);
       }
       @include media-to($tablet-bp) {
-        height: 18rem;
+        height: 16rem;
       }
       @include media-to($small-bp) {
         height: 15rem;
