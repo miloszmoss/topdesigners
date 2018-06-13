@@ -8,5 +8,13 @@
   border-radius: 50px;
   padding: 1.2rem 3rem;
   letter-spacing: 1px;
+  transition: all 0.3s;
   cursor: pointer;
+  &:hover {
+    color: $color-grey;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  @include media-to($phone-bp) {
+    font-size: 1.5rem;
+  }
 }

@@ -1,0 +1,110 @@
+.our-team {
+  max-width: 120rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  &__block {
+    display: flex;
+    flex-basis: 100%;
+    box-sizing: border-box;
+    @include media-to($tablet-bp) {
+      flex-direction: column;
+    }
+  }
+  &__img {
+    display: flex;
+    flex-basis: 50%;
+    background-position: center center;
+    min-height: 25rem;
+    padding: 1.5rem 0 1.5rem 1.5rem;
+    @include media-to($tablet-bp) {
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 0 1.5rem 1.5rem 1.5rem;
+    }
+    &.adrianna {
+      background-image: url('../../images/adrianna.png');
+    }
+    &.oli {
+      background-image: url('../../images/olivia.png');
+    }
+    &.thomas {
+      background-image: url('../../images/thomas.png');
+    }
+    &.tayl {
+      background-image: url('../../images/taylor.png');
+    }
+    &.even {
+      padding: 1.5rem 1.5rem 1.5rem 0;
+    }
+  }
+  &__cont {
+    @include center-center;
+    height: 100%;
+    border-top: $border-b-thin;
+    border-right: $border-b-thin;
+    border-bottom: $border-b-thin;
+    @include media-to($tablet-bp) {
+      border-top: $border-b-thin;
+      border-right: $border-b-thin;
+      border-left: $border-b-thin;
+      border-bottom: none;
+    }
+    &.even {
+      border-right: none;
+      border-left: $border-b-thin;
+    }
+  }
+  &__border {
+    border-top: $border-w-thin;
+    border-left: $border-w-thin;
+    border-bottom: $border-w-thin;
+    width: 100%;
+    height: 100%;
+    @include media-to($tablet-bp) {
+      border-top: none;
+      height: unset;
+      border-left: $border-w-thin;
+      border-right: $border-w-thin;
+      border-bottom: $border-w-thin;
+    }
+    &.even {
+      border-left: none;
+      border-right: $border-w-thin;
+    }
+  }
+  &__desc {
+    flex-basis: 50%;
+    padding: 1.5rem 1.5rem 1.5rem 0;
+    @include media-to($tablet-bp) {
+      padding: 1.5rem 1.5rem 0 1.5rem;
+      order: -1;
+    }
+    &.even {
+      padding: 1.5rem 0 1.5rem 1.5rem;
+    }
+  }
+  &__title {
+    font-size: 3.6rem;
+    font-weight: $fw-regular;
+    color: #000;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    border-bottom: 2px solid $color-red;
+    &--small {
+      display: block;
+      text-align: center;
+      text-transform: none;
+      font-size: 1.6rem;
+      font-weight: lighter;
+    }
+  }
+  &__subtitle {
+    padding-top: 0.7rem;
+    font-size: 1.8rem;
+    font-weight: lighter;
+    text-align: center;
+    width: 70%;
+  }
+}
