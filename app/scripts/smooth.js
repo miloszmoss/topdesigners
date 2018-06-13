@@ -1,7 +1,20 @@
-document.querySelector('.footer_home').addEventListener('click', () => {
-  scrollIt(document.querySelector('.header'), 800, 'easeOutQuad', () =>
-    console.log(`Just finished scrolling to ${window.pageYOffset}px`)
-  );
+document.querySelector('.header__down').addEventListener('click', () => {
+  scrollIt(document.querySelector('.stats'), 800, 'easeOutQuad');
+});
+document.querySelector('.menu__about-us').addEventListener('click', () => {
+  scrollIt(document.querySelector('.stats'), 800, 'easeOutQuad');
+});
+document.querySelector('.menu__our-team').addEventListener('click', () => {
+  scrollIt(document.querySelector('.meet-us'), 800, 'easeOutQuad');
+});
+document.querySelector('.menu__portfolio').addEventListener('click', () => {
+  scrollIt(document.querySelector('.portfolio'), 800, 'easeOutQuad');
+});
+document.querySelector('.menu__brands').addEventListener('click', () => {
+  scrollIt(document.querySelector('.brands'), 800, 'easeOutQuad');
+});
+document.querySelector('.menu__contact-us').addEventListener('click', () => {
+  scrollIt(document.querySelector('.footer'), 800, 'easeOutQuad');
 });
 
 function scrollIt(destination, duration = 200, easing = 'linear', callback) {
@@ -99,54 +112,3 @@ function scrollIt(destination, duration = 200, easing = 'linear', callback) {
   }
   scroll();
 }
-
-const homeBtn = document.querySelectorAll('.home');
-const newHomeBtn = Array.from(homeBtn);
-newHomeBtn.forEach(button => {
-  button.addEventListener('click', () => {
-    toggleMenu();
-    scrollIt(document.querySelector('.header'), 800, 'easeOutQuad', () =>
-      console.log(`Just finished scrolling to ${window.pageYOffset}px`)
-    );
-  });
-});
-
-const competencesBtn = document.querySelectorAll('.competences');
-const newcompetencesBtn = Array.from(competencesBtn);
-newcompetencesBtn.forEach(button => {
-  button.addEventListener('click', () => {
-    toggleMenu();
-    scrollIt(document.querySelector('.quality'), 800, 'easeOutQuad', () =>
-      console.log(`Just finished scrolling to ${window.pageYOffset}px`)
-    );
-  });
-});
-
-const contactBtn = document.querySelectorAll('.contact');
-const newcontactBtn = Array.from(contactBtn);
-newcontactBtn.forEach(button => {
-  button.addEventListener('click', () => {
-    toggleMenu();
-    scrollIt(document.querySelector('.ask'), 800, 'easeOutQuad', () =>
-      console.log(`Just finished scrolling to ${window.pageYOffset}px`)
-    );
-  });
-});
-
-const projectsBtn = document.querySelectorAll('.projects');
-const newprojectsBtn = Array.from(projectsBtn);
-newprojectsBtn.forEach(button => {
-  button.addEventListener('click', () => {
-    toggleMenu();
-    scrollIt(document.querySelector('.realizations'), 800, 'easeOutQuad');
-  });
-});
-
-const crewBtn = document.querySelectorAll('.crew');
-const newcrewBtn = Array.from(crewBtn);
-newcrewBtn.forEach(button => {
-  button.addEventListener('click', () => {
-    toggleMenu();
-    scrollIt(document.querySelector('.team'), 800, 'easeOutQuad');
-  });
-});

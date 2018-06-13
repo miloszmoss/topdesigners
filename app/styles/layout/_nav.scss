@@ -125,8 +125,9 @@
           color: #fff;
           padding-bottom: 0.5rem;
           transition: all 0.3s;
+          padding: 0.5rem;
           &:hover {
-            border-bottom: 2px solid #fff;
+            border: 1px solid #fff;
           }
         }
       }
