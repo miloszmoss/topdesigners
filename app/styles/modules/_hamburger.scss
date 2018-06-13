@@ -1,0 +1,37 @@
+.hamburger {
+  display: block;
+  cursor: pointer;
+}
+.hamburger .line {
+  width: 3rem;
+  height: 0.2rem;
+  background-color: #ecf0f1;
+  display: block;
+  margin: 5px 2rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  @include media-to($phone-bp) {
+    width: 4rem;
+    height: 0.2rem;
+    padding: 1px 0;
+  }
+}
+
+#hamburger-1.is-active .line:nth-child(2) {
+  opacity: 0;
+}
+
+#hamburger-1.is-active .line:nth-child(1) {
+  -webkit-transform: translateY(10px) rotate(45deg);
+  -ms-transform: translateY(10px) rotate(45deg);
+  -o-transform: translateY(10px) rotate(45deg);
+  transform: translateY(6px) rotate(45deg);
+}
+
+#hamburger-1.is-active .line:nth-child(3) {
+  -webkit-transform: translateY(-13px) rotate(-45deg);
+  -ms-transform: translateY(-13px) rotate(-45deg);
+  -o-transform: translateY(-13px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
+}

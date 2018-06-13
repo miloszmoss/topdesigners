@@ -28,6 +28,11 @@ ol {
 
 a {
   text-decoration: none;
+  &:visited,
+  &:focus,
+  &:active {
+    color: #000;
+  }
 }
 
 abbr {
