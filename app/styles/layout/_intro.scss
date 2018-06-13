@@ -8,9 +8,10 @@
     border: 1px solid #fff;
     height: 20rem;
     width: 102rem;
+    box-sizing: border-box;
     @include center-center;
     margin: 0 auto;
-    @include media-to($wide-bp) {
+    @include media-to($desktop-bp) {
       margin: 0 4rem;
     }
   }
