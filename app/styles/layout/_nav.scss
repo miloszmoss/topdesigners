@@ -11,7 +11,8 @@
     flex-basis: 70%;
     justify-content: flex-end;
     @include media-to($phone-bp) {
-      flex-basis: 50%;
+      flex-basis: unset;
+      width: 50%;
     }
   }
   &__right {
@@ -20,7 +21,7 @@
     height: 100%;
     background-color: #000;
     @include media-to($phone-bp) {
-      flex-basis: 50%;
+      flex: 1;
     }
   }
   &__list {
@@ -34,6 +35,10 @@
     }
     @include media-to($desktop-bp) {
       width: 100%;
+    }
+    @include media-to($phone-bp) {
+      width: 50%;
+      justify-content: center;
     }
   }
   &-item {
