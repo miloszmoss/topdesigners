@@ -5,6 +5,7 @@
   ];
   const height = document.querySelector('.header').offsetHeight;
   const menu = document.querySelector('.nav__wall');
+  console.log(width[0]);
   menu.style.width = `${width[0]}px`;
   menu.style.height = `${height - width[1]}px`;
 })();

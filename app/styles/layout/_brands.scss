@@ -1,0 +1,57 @@
+.brands-icons {
+  display: flex;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 5rem 0;
+  &__col-xl {
+    display: flex;
+    flex-basis: calc(2 * 100% / 7);
+    justify-content: center;
+    @include media-to($desktop-bp) {
+      flex-basis: calc(2 * 100% / 6);
+    }
+    @include media-to($tablet-bp) {
+      flex-basis: 50%;
+      &:nth-child(3) {
+        display: none;
+      }
+    }
+  }
+  &__col-small {
+    display: flex;
+    justify-content: center;
+    flex-basis: calc(100% / 7);
+    @include media-to($desktop-bp) {
+      display: none;
+    }
+  }
+  &__vertical {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    justify-content: center;
+    align-items: center;
+    > div {
+      width: 10rem;
+      height: 10rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 2rem 0;
+      filter: grayscale(100%);
+      opacity: 0.5;
+      transition: all 0.3s;
+      &:hover {
+        filter: grayscale(0%);
+        opacity: 0.9;
+      }
+    }
+    img {
+      width: 6.2rem;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
