@@ -110,11 +110,12 @@
     height: calc(56vh);
     width: 100%;
     top: 100%;
-    z-index: 30;
+    z-index: 0;
     background-color: rgba(33, 31, 31, 0.9);
     transition: all 0.5s ease-in-out;
     transform: translateX(-20%);
     opacity: 0;
+    pointer-events: none;
     .menu-list {
       padding: 0;
       display: flex;
@@ -139,6 +140,7 @@
     }
     &-show {
       display: unset;
+      pointer-events: unset;
       transform: translateX(0);
       opacity: 1;
     }
