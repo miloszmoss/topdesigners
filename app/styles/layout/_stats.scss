@@ -57,3 +57,51 @@
     }
   }
 }
+
+#circle1,
+#circle2,
+#circle3 {
+  margin: 20px;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  position: relative;
+  &::before {
+    position: absolute;
+    top: 65%;
+    text-align: center;
+    color: $color-grey;
+    width: 100%;
+    font-size: 1.7rem;
+    font-weight: lighter;
+  }
+  & * {
+    font-size: 6rem;
+    font-weight: $fw-bold;
+  }
+}
+
+#circle1 {
+  &::before {
+    content: 'BIG PROJECTS';
+  }
+  div {
+    color: #f34739 !important;
+  }
+}
+#circle2 {
+  &::before {
+    content: 'CLIENTS';
+  }
+  div {
+    color: $color-green !important;
+  }
+}
+#circle3 {
+  &::before {
+    content: 'MONTHS';
+  }
+  div {
+    color: #000 !important;
+  }
+}
